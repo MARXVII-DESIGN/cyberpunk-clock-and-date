@@ -20,6 +20,7 @@ body {
   padding: 64px;
   height: 100vh;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
 }
 
@@ -32,7 +33,8 @@ body {
   width: min-content;
   align-self: end;
 }
-.date-container h1 {
+.date-container h1,
+.time-container h1 {
   text-transform: uppercase;
   font-size: 72px;
 }
@@ -55,4 +57,21 @@ body {
 
 .time-container {
   color: var(--black);
+  background-color: var(--yellow);
+  width: max-content;
+  padding: 60px 60px 0 60px;
+  display: flex;
+  flex-direction: column;
+}
+#time {
+  font-size: 136px;
+  border-top: solid 1px var(--black);
+}
+
+#time-tagline {
+  color: white;
+  background-color: var(--black);
+  width: max-content;
+  padding: 0 64px;
+  align-self: flex-end;
 }

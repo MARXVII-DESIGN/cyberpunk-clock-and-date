@@ -3,6 +3,9 @@ var d = new Date();
 var day = d.getDate();
 var month = d.getMonth() + 1;
 var year = d.getFullYear();
+var hours = d.getHours();
+var minutes = d.getMinutes();
+var seconds = d.getSeconds();
 
 const winter = "It's Winter";
 const spring = "It's Spring";
@@ -14,7 +17,7 @@ document.getElementById('month-number').innerHTML = month;
 document.getElementById('date-number').innerHTML = day;
 document.getElementById('year-number').innerHTML = year;
 
-checkMonth();
+checkMonth(); // Sets the season tagline
 
 // Check Month for What Season It Falls Into
 function checkMonth() {
@@ -42,3 +45,12 @@ function setMonthSummer() {
 function setMonthFall() {
   document.getElementById('season').innerHTML = fall;
 }
+
+// Set Time
+const fullTime = hours + ':' + minutes + ':' + seconds;
+
+function setTime() {
+  document.getElementById('time').innerHTML = fullTime;
+}
+
+setTime();
