@@ -58,14 +58,30 @@ body {
 .time-container {
   color: var(--black);
   background-color: var(--yellow);
-  width: max-content;
-  padding: 60px 60px 0 60px;
+  width: 65%;
+  padding: 30px 60px 0 60px;
   display: flex;
   flex-direction: column;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 50px) 0,
+    100% calc(0% + 50px),
+    100% 100%,
+    calc(0% + 50px) 100%,
+    0 calc(100% - 50px)
+  );
+}
+.time-container h1 {
+  border-bottom: solid 1px var(--black);
+  width: 80%;
+}
+#under-bar {
+  background-color: var(--black);
+  width: 200px;
+  height: 10px;
 }
 #time {
   font-size: 136px;
-  border-top: solid 1px var(--black);
 }
 
 #time-tagline {
